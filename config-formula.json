@@ -1,0 +1,26 @@
+{
+  "verbose": true,
+  "stream": true,
+  "input": {
+    "puller": {
+      "type": "mongodb",
+      "uri": "mongodb://192.168.1.168",
+      "db": "db_sensor",
+      "collection": "report_0"
+      }
+  },
+  "output": {
+    "pusher_power": {
+      "type": "influxdb2",
+      "uri": "127.0.0.1", 
+      "port": 8086,
+      "db": "power_consumption",
+      "org": "org_test",
+      "token": "LYiZVW4_8q0DFNktwE8T9tHPgDRYZ-Lm32ObLTjIE_-DNSTnL6q_ynUh8ibMmUYHh63Te0SPENkUiogAloa99g=="
+    }
+  },
+  "cpu-base-freq": 1900,
+  "cpu-error-threshold": 2.0,
+  "disable-dram-formula": true,
+  "sensor-reports-frequency": 500
+}
